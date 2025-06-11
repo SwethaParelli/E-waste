@@ -1,1 +1,3 @@
-# E-waste
+# E-Wastage Recycling Locator
+**E-Waste Management** is a project designed to promote sustainable disposal and recycling of electronic waste using modern web technologies. With the rising challenge of e-waste, this initiative provides awareness, resources, and practical solutions for responsible management. The project is built using **MongoDB** for efficient database management, **Node.js** and **Express.js** for server-side functionality, and **HTML/CSS** for a seamless user interface. By leveraging technology to streamline information access and recycling efforts, E-Waste Management aims to create a more environmentally conscious approach to handling electronic waste.
+
