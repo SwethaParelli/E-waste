@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Waste Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+          <div class="logo">
+            <i class="fas fa-recycle"></i>
+            <span>E-Waste Management</span>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#why-ewaste-matters">Awareness</a></li>
+              <li><a href="#register">Register/Login</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h2>Join Us in Tackling E-Waste</h2>
+          <p>Efficient collection, recycling, and safe disposal of electronic waste.</p>
+          <a href="#pickup" class="cta-button">Schedule a Pickup</a>
+        </div>
+      </section>
+      
+      
+
+      
+      <section id="why-ewaste-matters" class="highlight-section">
+        <div class="container">
+          <h2>Why E-Waste Matters</h2>
+          <div class="ewaste-intro">
+            <p>
+              India is the third-largest generator of E-Waste globally, producing approximately 4.1 million tonnes annually (UNEP, 2021) driven by rapid technological advancements and frequent replacement cycles. However, only about 10% of this waste is processed through formal recycling systems. The informal sector handles the majority, often employing hazardous methods. <a href="https://www.who.int/news-room/fact-sheets/detail/electronic-waste-%28e-waste%29" target="_blank">Read More</a>
+            </p>
+          </div>
+          <div class="ewaste-cards">
+            <div class="ewaste-card">
+              <h3>Health Risks</h3>
+              <p>Electronic Waste contains hazardous materials such as lead, mercury, and cadmium, which can leach into soil and water. Exposure can result in neurological disorders, kidney failure, and other chronic illnesses.</p>
+            </div>
+            <div class="ewaste-card">
+              <h3>Environmental Damage</h3>
+              <p>Open burning and improper disposal contaminate air, water, and soil. These practices also release greenhouse gases, contributing to climate change.</p>
+            </div>
+            <div class="ewaste-card">
+              <h3>Economic Loss</h3>
+              <p>Poor recycling practices lead to the wastage of valuable materials like gold, silver, and copper.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+  
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-item">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-truck"></i>
+              <h3>Doorstep Pickup</h3>
+            </div>
+            <div class="card-back">
+              We collect e-waste right from your doorstep at your convenience.
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-recycle"></i>
+              <h3>Eco-Friendly Recycling</h3>
+            </div>
+            <div class="card-back">
+              Responsible recycling through certified centers only.
+            </div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="card-inner">
+            <div class="card-front">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Data Security</h3>
+            </div>
+            <div class="card-back">
+              All devices go through certified data destruction.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="register" class="form-section">
+    <div class="container">
+      <h2>Register / Login</h2>
+      <form id="registerForm" class="vertical-form">
+        <input type ="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Register/Login</button>
+        <div class="success-message" id="registerResponseMessage"></div>
+      </form>
+      <button onclick="forgotPassword()">Forgot Password?</button>
+    </div>
+  </section>
+  
+  <section id="pickup" class="form-section">
+    <div class="container">
+      <h2>Schedule a Pickup</h2>
+      <form id="pickupForm" class="vertical-form">
+        
+        <input type="text" id="pickupName" placeholder="Name" required>
+
+        
+        <input type="text" id="pickupPhone" placeholder="Phone Number" required>
+
+        <input type="text" id="userId" placeholder="User ID" required />
+        <input type="text" id="location" placeholder="City (e.g., Hyderabad)" required />
+<input type="text" id="exactLocation" placeholder="Exact Location (e.g., Flat 101, ABC Apartments)" required />
+        <div class="form-group">
+            <label for="itemDropdown">Item Type:</label>
+            <div class="form-inline">
+              <select id="itemDropdown" onchange="checkIfOtherSelected()">
+                <option value="">-- Select an item --</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Mobile">Mobile</option>
+                <option value="TV">TV</option>
+                <option value="Refrigerator">Refrigerator</option>
+                <option value="Printer">Printer</option>
+                <option value="Other">Other</option>
+              </select>
+              <input type="text" id="customItemInput" placeholder="Enter item type" />
+              <button type="button" class="btn-add" onclick="addItem()">+ Add Item</button>
+            </div>
+          </div>
+          
+          <ul id="addedItemsList"></ul>
+          
+
+          <input type="date" id="pickupDate" required min="" />
+          <select id="pickupTime" required>
+            <option value="">-- Select a time slot --</option>
+          </select>
+          
+        <button type="submit">Schedule</button>
+        <div class="success-message" id="pickupResponseMessage"></div>
+      </form>
+    </div>
+  </section>
+  <section id="about" class="strip-section">
+    <div class="container">
+      <h2><center>About Us</center></h2>
+      <div class="strip-content">
+        <p>
+          We are passionate about solving the growing crisis of electronic waste. Our platform connects environmentally-conscious individuals with safe and convenient e-waste recycling options.
+          <br><br>
+          From doorstep pickups to secure data disposal and environmental awareness programs, we’re here to help you make an impact. Let’s build a cleaner tomorrow — together.
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="contact-details">
+      <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+      <p><i class="fas fa-envelope"></i> ewaste@grietcollege.com</p>
+      <p><i class="fab fa-twitter"></i> @ewastegriet</p>
+      <p>&copy; 2025 E-Waste Management</p>
+    </div>
+  </footer>
+
+  <script>
+    async function forgotPassword() {
+      const email = prompt("Enter your registered email:");
+      if (!email) return;
+      const res = await fetch('/api/forgot-password', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ email })
+      });
+      const data = await res.json();
+      alert(data.message);
+    }
+
+    document.getElementById('registerForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const password = document.getElementById('password').value;
+
+      const res = await fetch('/api/register-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, password })
+
+      });
+      const data = await res.json();
+      document.getElementById('registerResponseMessage').innerText = data.message;
+    });
+
+    
+let addedItems = [];
+
+function checkIfOtherSelected() {
+    const dropdown = document.getElementById('itemDropdown');
+    const customInput = document.getElementById('customItemInput');
+    if (dropdown.value === 'Other') {
+        customInput.style.display = 'inline-block';
+    } else {
+        customInput.style.display = 'none';
+        customInput.value = '';
+    }
+}
+
+
+function addItem() {
+    const dropdown = document.getElementById('itemDropdown');
+    const customInput = document.getElementById('customItemInput');
+    let value = dropdown.value;
+
+    if (value === 'Other') {
+        value = customInput.value.trim();
+        if (!value) {
+            alert("Please enter the item type for 'Other'.");
+            return;
+        }
+    } else if (!value) {
+        alert("Please select an item.");
+        return;
+    }
+
+    addedItems.push(value);
+    updateItemList();
+
+    // Reset dropdown and input
+    dropdown.value = '';
+    customInput.value = '';
+    customInput.style.display = 'none';
+}
+
+function updateItemList() {
+    const list = document.getElementById('addedItemsList');
+    list.innerHTML = '';
+    addedItems.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.textContent = item + ' ';
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '❌';
+        removeBtn.onclick = () => {
+            addedItems.splice(index, 1);
+            updateItemList();
+        };
+        li.appendChild(removeBtn);
+        list.appendChild(li);
+    });
+}
+
+document.getElementById('pickupForm')?.addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const name = document.getElementById('pickupName').value;
+const phone = document.getElementById('pickupPhone').value;
+
+    const userId = document.getElementById('userId').value;
+    const location = document.getElementById('location').value;
+    const date = document.getElementById('pickupDate').value;
+    const time = document.getElementById('pickupTime').value;
+    const preferredTime = `${date}T${time}:00`;
+    const exactLocation = document.getElementById('exactLocation').value;
+    const fullLocation = `${location}, ${exactLocation}`;
+    if (addedItems.length === 0) {
+        alert("Please add at least one item type.");
+        return;
+    }
+
+
+
+const response = await fetch('http://localhost:3000/schedule-pickup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ userId, name, phone, location: fullLocation, itemType: addedItems, preferredTime })
+});
+
+    // Set min pickup date
+const pickupDateInput = document.getElementById('pickupDate');
+const today = new Date();
+today.setDate(today.getDate() + 2);
+pickupDateInput.min = today.toISOString().split("T")[0];
+
+// Populate time slots
+const pickupTimeSelect = document.getElementById('pickupTime');
+for (let hour = 9; hour <= 20; hour++) {
+    const option = document.createElement('option');
+    const displayHour = hour < 10 ? `0${hour}` : hour;
+    option.value = `${displayHour}:00`;
+    option.textContent = `${displayHour}:00`;
+    pickupTimeSelect.appendChild(option);
+}
+
+    const data = await response.json();
+    const messageBox = document.getElementById('pickupResponseMessage');
+    messageBox.innerText = data.message;
+    messageBox.style.display = 'block';
+
+    setTimeout(() => {
+        messageBox.style.display = 'none';
+    }, 5000);
+
+    document.getElementById('pickupForm').reset();
+    addedItems = [];
+    updateItemList();
+});
+
+  // ... existing code above ...
+
+  // 🟢 Moved outside so it runs on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    // Set pickup date to min = today + 2 days
+    const pickupDateInput = document.getElementById('pickupDate');
+    const today = new Date();
+    today.setDate(today.getDate() + 2);
+    pickupDateInput.min = today.toISOString().split("T")[0];
+
+    // Generate hourly slots from 09:00 to 20:00
+    const pickupTimeSelect = document.getElementById('pickupTime');
+    for (let hour = 9; hour <= 20; hour++) {
+  const displayHour = (hour % 12) || 12; // convert to 12-hour format
+  const period = hour < 12 ? 'AM' : 'PM';
+  const timeValue = `${hour.toString().padStart(2, '0')}:00`;
+  const option = document.createElement('option');
+  option.value = timeValue;
+  option.textContent = `${displayHour}:00 ${period}`;
+  pickupTimeSelect.appendChild(option);
+}
+
+  });
+
+
+
+
+  </script>
+</body>
+</html>

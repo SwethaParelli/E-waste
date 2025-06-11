@@ -1,0 +1,321 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+header {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  padding: 30px 0; /* Elongated */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+/* Hero Section */
+.hero {
+  background: url('ewasteimage.jpg') no-repeat center center/cover; /* Replace with your image URL */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the right */
+  text-align: right;
+  color: black;
+  padding: 0 20px;
+}
+
+.hero-content {
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background: #FF5722;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+.form-section {
+  background: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+form input, form button {
+  width: 250px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.service-item {
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background: #ffffff;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-front i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #2ecc71;
+}
+
+.card-back {
+  background: #2ecc71;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+.vertical-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-form input,
+.vertical-form button {
+  width: 300px;
+  max-width: 100%;
+  margin: 10px 0;
+}
+.strip-section {
+  background: #e9f9f1;
+  padding: 60px 0;
+}
+
+.strip-content {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+}
+
+.highlight-section {
+  background: #f0fdf4;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.ewaste-intro {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.ewaste-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.ewaste-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.ewaste-card:hover {
+  transform: translateY(-5px);
+}
+
+.ewaste-card h3 {
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+.ewaste-intro a {
+  color: #2ecc71;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.form-group {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-inline {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+}
+
+.form-inline select,
+.form-inline input,
+.form-inline button {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 300px;
+}
+
+#customItemInput {
+  display: none;
+}
+
+.btn-add {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #27ae60;
+}
+
+#addedItemsList {
+  list-style: none;
+  padding: 0;
+  margin: 10px auto;
+  max-width: 300px;
+}
+
+#addedItemsList li {
+  background-color: #e9f9f1;
+  border: 1px solid #2ecc71;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#addedItemsList li button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
